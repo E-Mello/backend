@@ -61,13 +61,3 @@ app.include_router(categories.categories_route, tags=["Categorias"])
 app.include_router(medical.route, tags=["Médicos"])
 app.include_router(specializations.specializations_route, tags=["Especializações"])
 app.include_router(spe_med.spe_medical_route, tags=["Auxiliar"])
-
-
-# Configuração do CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # URL do seu frontend Next.js
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
